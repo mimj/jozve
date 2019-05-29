@@ -1,0 +1,398 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+//@import 'variables';
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+//@import "bulma.css";
+@import "reset.css";
+@import "../assets/fontello/css/fontello.css";
+@import "./fonts/Operator Mono/style.css";
+@import "toastr.min.css";
+@import "vex.css";
+@import "vex-theme-plain.css";
+
+$pen_color_blue: #1721ff;
+
+$font-path: "../fonts";
+
+@font-face {
+  font-family: 'far_khodkar';
+  font-style: normal;
+  font-weight: 400;
+  //src: url('#{$font-path}/aldhabi.ttf');
+  src: //url('#{$font-path}/aldhabi.eot?#iefix') format("embedded-opentype"),
+          //url('#{$font-path}/aldhabi.woff2') format("woff2"),
+          url('#{$font-path}/Far_Khodkar.woff') format("woff"),
+          url('#{$font-path}/Far_Khodkar.ttf') format("truetype"),
+  //url('#{$font-path}/aldhabi.svg#Quicksand') format("svg");
+}
+
+@font-face {
+  font-family: 'B_Roya';
+  font-style: normal;
+  font-weight: 100;
+  //src: url('#{$font-path}/aldhabi.ttf');
+  src: //url('#{$font-path}/aldhabi.eot?#iefix') format("embedded-opentype"),
+          //url('#{$font-path}/aldhabi.woff2') format("woff2"),
+          url('#{$font-path}/roya.woff') format("woff"),
+          url('#{$font-path}/roya.ttf') format("truetype"),
+  //url('#{$font-path}/aldhabi.svg#Quicksand') format("svg");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  //background: linear-gradient(145deg, #aaa, #ddd) no-repeat !important;
+  height: 100%;
+  background-attachment: fixed;
+  direction: rtl;
+  font-family: "B_Roya";
+  //font-weight: bold;
+}
+
+.latin {
+  font-family: sans-serif;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.icon-button {
+  font-family: B_Roya;
+  margin: 30px;
+  border: none;
+  //background: #786f72;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 10px;
+  color: #373737;
+  border-radius: 3px;
+}
+
+.icon-button:hover {
+  color: #fff5f7;
+  background-color: $pen_color_blue;
+}
+
+.icon-button-small, .icon-button-small-red {
+  font-family: B_Roya;
+  margin-right: .6rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: .8rem;
+  padding: .4rem;
+  //color: #efefef;
+  //border-radius: 3px;
+}
+
+.icon-button-verysmall, .icon-button-verysmall-red {
+  font-family: B_Roya;
+  margin-right: .6rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: .7rem;
+  padding: .4rem;
+  //color: #373737;
+  //border-radius: 3px;
+}
+
+.icon-button-small:hover {
+  color: $pen_color_blue;
+  //background-color: $pen_color_blue;
+}
+
+.icon-button-small-red:hover {
+  color: #ff363f;
+  //background-color: $pen_color_blue;
+}
+
+.icon-button-verysmall:hover {
+  color: $pen_color_blue;
+  //background-color: $pen_color_blue;
+}
+
+.icon-button-verysmall-red:hover {
+  color: #ff363f;
+  //background-color: $pen_color_blue;
+}
+
+/**********************app.blade**********************/
+
+.header {
+  display: flex;
+  padding: 20px;
+  font-family: "Far_Khodkar";
+  align-self: center;
+  .brand {
+    font-size: 3rem;
+    //background: linear-gradient($pen_color, #8bb8df);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    color: $pen_color_blue;
+  }
+  ul {
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  ul li {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    a {
+      color: $pen_color_blue;
+    }
+  }
+}
+
+/**********************app.blade**********************/
+
+/** Login.blade*/
+.login-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  form {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: auto;
+    padding: 2rem;
+    background: floralwhite;
+    //border: double 4px transparent;
+    //border-radius: 80px;
+    //background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+    //background-origin: border-box;
+    //background-clip: content-box, border-box;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+
+    input[type="email"], input[type='password'], input[type='text'] {
+      direction: rtl;
+      width: 90%;
+      padding: 10px;
+      border: 2px solid #9fa0a2;
+      margin: .5rem 1rem;
+      background-color: transparent !important;
+      color: #636168;
+      border-radius: 999px;
+      font-family: "Helvetica Neue", sans-serif;
+      font-weight: bold;
+      -webkit-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+
+    }
+    input[type="email"]:-webkit-autofill, input[type='password']:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 100px #fff inset;
+      -webkit-text-fill-color: #636168; /* this rule is used to style auto-fill text color for chrome*/
+    }
+    button {
+      font-family: "B Mitra";
+      margin: 2rem;
+      background: linear-gradient(23deg, #190ff5, #7c76f9);
+      color: #eee;
+      border-radius: 999px;
+      border: none;
+      width: 90%;
+      height: 3rem;
+      font-size: large;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
+
+}
+
+#email {
+
+}
+
+/** Login.blade*/
+
+/**Filter Input*/
+.filter {
+  width: 90%;
+  padding: 3px 10px;
+  border: 2px solid #9fa0a2;
+  margin: .5rem 1rem;
+  background-color: transparent !important;
+  color: #636168;
+  border-radius: 999px;
+  font-family: "B_Roya";
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+  outline: none
+}
+
+/**Filter Input*/
+
+/**Modal*/
+.addPieceForm {
+  background: #fff5f7;
+}
+
+.modal {
+  position: fixed;
+  /*background: rgba(100, 100, 100, .3);*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /*z-index: 100;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-background {
+  background-color: rgba(48, 48, 48, 0.93);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-content {
+  width: 700px;
+  //height: 200px;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  border-radius: 2px;
+}
+
+.modal-content form {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.modal-content form input[type='submit'] {
+  border-radius: 999rem;
+  border: none;
+  background: #5640c7;
+  color: white;
+  margin: 1rem;
+  padding: .5rem;
+  font-family: B_Roya;
+  font-weight: bolder;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-flow: row;
+  margin: 1rem 1rem 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-wrapper .default-input {
+  /*width: 90%;*/
+  flex-grow: 1;
+  padding: .3rem;
+  border: 2px solid #9fa0a2;
+  margin: .3rem 1rem 0 1rem;
+  background-color: transparent !important;
+  color: #636168;
+  border-radius: 5px;
+  font-family: "B_Roya";
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  outline: none
+}
+
+.input-wrapper .default-textarea {
+  /*width: 90%;*/
+  height: 10rem;
+  flex-grow: 1;
+  padding: .3rem;
+  border: 2px solid #9fa0a2;
+  margin: .3rem 1rem 0 1rem;
+  background-color: transparent !important;
+  color: #636168;
+  border-radius: 5px;
+  font-family: "B_Roya";
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 0.75);
+  outline: none;
+  overflow: auto;
+}
+
+.input-wrapper .file-input {
+  /*width: 90%;*/
+  flex-grow: 1;
+  padding: .3rem;
+  margin: .3rem 1rem 0 1rem;
+  font-family: "B_Roya";
+  font-weight: bold;
+  outline: none;
+  overflow: auto;
+}
+
+#code-body {
+  font-family: Consolas;
+}
+
+.modal-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  color: #ff6eb1;
+}
+
+.modal-close:hover {
+  background: rgba(18, 18, 18, 0.93);
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+/**Modal*/
+
+/*Vex Modal confirm and alerts*/
+.vex {
+  direction: ltr;
+}
+
+.vex-content {
+  direction: rtl;
+}
+
+.vex-dialog-message, .vex-dialog-button {
+  font-family: B_Roya !important;
+  font-size: 1rem;
+}
+
+/*Vex Modal confirm and alerts*/
